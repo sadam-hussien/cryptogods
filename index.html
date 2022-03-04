@@ -24,11 +24,6 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&family=Orbitron:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/ycodetech/horizontal-timeline-2.0@2/css/horizontal_timeline.2.0.min.css"
-    />
     <!-- swiper library css  -->
     <link
       rel="stylesheet"
@@ -104,6 +99,27 @@
 
     <!-- start discover-section / -->
     <section class="discover p-t p-b">
+      <audio src="audio/audio.mp3" id="my_audio" loop="loop"></audio>
+      <div class="equaliser-container" onclick="playAudio()">
+        <span>Sound </span>
+        <div>
+          <ol class="equaliser-column">
+            <li class="colour-bar"></li>
+          </ol>
+          <ol class="equaliser-column">
+            <li class="colour-bar"></li>
+          </ol>
+          <ol class="equaliser-column">
+            <li class="colour-bar"></li>
+          </ol>
+          <ol class="equaliser-column">
+            <li class="colour-bar"></li>
+          </ol>
+          <ol class="equaliser-column">
+            <li class="colour-bar"></li>
+          </ol>
+        </div>
+      </div>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-sm-11 col-md-8 col-lg-6 text-center">
@@ -530,6 +546,21 @@
                 </div>
               </div>
             </div>
+
+            <div class="container">
+              <div class="arrow roadmap-navigation d-flex justify-content-end">
+                <span
+                  class="roadmap-navigation-prev arrow-icon arrow-icon-right slide-right"
+                >
+                  <!-- <ion-icon name="arrow-back-outline"></ion-icon> -->
+                </span>
+                <span
+                  class="roadmap-navigation-next arrow-icon arrow-icon-left slide-left"
+                >
+                  <!-- <ion-icon name="arrow-forward-outline"></ion-icon> -->
+                </span>
+              </div>
+            </div>
           </div>
           <div id="tab-2" class="roadmap-box-outer">
             <h4 class="roadmap-title text-uppercase">
@@ -642,6 +673,21 @@
                   </div>
                   <div class="last-line"></div>
                 </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="arrow roadmap-navigation d-flex justify-content-end">
+                <span
+                  class="roadmap-navigation-prev arrow-icon arrow-icon-right slide-right"
+                >
+                  <!-- <ion-icon name="arrow-back-outline"></ion-icon> -->
+                </span>
+                <span
+                  class="roadmap-navigation-next arrow-icon arrow-icon-left slide-left"
+                >
+                  <!-- <ion-icon name="arrow-forward-outline"></ion-icon> -->
+                </span>
               </div>
             </div>
           </div>
@@ -759,6 +805,21 @@
                 </div>
               </div>
             </div>
+
+            <div class="container">
+              <div class="arrow roadmap-navigation d-flex justify-content-end">
+                <span
+                  class="roadmap-navigation-prev arrow-icon arrow-icon-right slide-right"
+                >
+                  <!-- <ion-icon name="arrow-back-outline"></ion-icon> -->
+                </span>
+                <span
+                  class="roadmap-navigation-next arrow-icon arrow-icon-left slide-left"
+                >
+                  <!-- <ion-icon name="arrow-forward-outline"></ion-icon> -->
+                </span>
+              </div>
+            </div>
           </div>
 
           <div id="tab-4" class="roadmap-box-outer">
@@ -874,22 +935,22 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="container">
-        <div class="arrow roadmap-navigation d-flex justify-content-end">
-          <span
-            class="roadmap-navigation-prev arrow-icon arrow-icon-right slide-right"
-          >
-            <!-- <ion-icon name="arrow-back-outline"></ion-icon> -->
-          </span>
-          <span
-            class="roadmap-navigation-next arrow-icon arrow-icon-left slide-left"
-          >
-            <!-- <ion-icon name="arrow-forward-outline"></ion-icon> -->
-          </span>
+            <div class="container">
+              <div class="arrow roadmap-navigation d-flex justify-content-end">
+                <span
+                  class="roadmap-navigation-prev arrow-icon arrow-icon-right slide-right"
+                >
+                  <!-- <ion-icon name="arrow-back-outline"></ion-icon> -->
+                </span>
+                <span
+                  class="roadmap-navigation-next arrow-icon arrow-icon-left slide-left"
+                >
+                  <!-- <ion-icon name="arrow-forward-outline"></ion-icon> -->
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1531,7 +1592,7 @@
     ></script>
     <!-- swiper library js  -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/ycodetech/horizontal-timeline-2.0@2/JavaScript/horizontal_timeline.2.0.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/ycodetech/horizontal-timeline-2.0@2/JavaScript/horizontal_timeline.2.0.min.js"></script> -->
     <!-- my js  -->
     <script src="./js/main.js"></script>
   </body>

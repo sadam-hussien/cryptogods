@@ -39,6 +39,17 @@ balls.forEach((el, i, ra) => {
   //   }
   // );
 });
+let count = 0;
+
+function playAudio() {
+  if (count === 0) {
+    count = 1;
+    document.getElementById("my_audio").play();
+  } else {
+    count = 0;
+    document.getElementById("my_audio").pause();
+  }
+}
 
 $(function () {
   var aboutSwiper = new Swiper(".about-swiper", {
@@ -102,7 +113,6 @@ $(function () {
 
   // scroll to top/
   $(window).on("scroll", function () {
-    console.log($(window).scrollTop());
     if ($(window).scrollTop() >= 200) {
       $(".scrolltotop").addClass("active");
     } else {
@@ -117,91 +127,374 @@ $(function () {
     });
   });
 
-  function roadMapSwiper(el, destroy) {
-    // ".roadmap-swiper-boxes"
-    var s = new Swiper(el, {
-      slidesPerView: 3,
-      spaceBetween: 0,
-      centeredSlides: true,
-      initialSlide: 1,
-      allowTouchMove: false,
-      navigation: {
-        nextEl: ".roadmap-navigation-next",
-        prevEl: ".roadmap-navigation-prev",
-      },
-      breakpoints: {
-        576: {
-          initialSlide: 1,
-          slidesPerView: 3,
-        },
-        767: {
-          slidesPerView: 3,
+  // function roadMapSwiper(el, destroy) {
+  //   // ".roadmap-swiper-boxes"
+  //   var s = new Swiper(el, {
+  //     slidesPerView: 3,
+  //     spaceBetween: 0,
+  //     centeredSlides: true,
+  //     initialSlide: 1,
+  //     allowTouchMove: false,
+  //     navigation: {
+  //       nextEl: ".roadmap-navigation-next",
+  //       prevEl: ".roadmap-navigation-prev",
+  //     },
+  //     breakpoints: {
+  //       576: {
+  //         initialSlide: 1,
+  //         slidesPerView: 3,
+  //       },
+  //       767: {
+  //         slidesPerView: 3,
 
-          initialSlide: 1,
-        },
-        991: {
-          initialSlide: 2,
-          slidesPerView: 5,
-        },
+  //         initialSlide: 1,
+  //       },
+  //       991: {
+  //         initialSlide: 2,
+  //         slidesPerView: 5,
+  //       },
+  //     },
+  //     on: {
+  //       init: function () {
+  //         $(".roadmap .roadmap-first-swiper").addClass("my-active-swiper");
+  //         let activeIndex = this.activeIndex;
+  //         if (activeIndex == this.params.initialSlide) {
+  //           $(".roadmap-navigation-prev").addClass(
+  //             "roadmap-navigation-prev-disabled"
+  //           );
+  //         } else {
+  //           $(".roadmap-navigation-prev").removeClass(
+  //             "roadmap-navigation-prev-disabled"
+  //           );
+  //         }
+  //       },
+  //       slideChange: function () {
+  //         if (this.activeIndex == this.params.initialSlide) {
+  //           $(".roadmap-navigation-prev").addClass(
+  //             "roadmap-navigation-prev-disabled"
+  //           );
+  //         } else {
+  //           $(".roadmap-navigation-prev").removeClass(
+  //             "roadmap-navigation-prev-disabled"
+  //           );
+  //         }
+  //         if (this.activeIndex > 1) {
+  //           $(".roadmap .roadmap-first-swiper").removeClass("my-active-swiper");
+  //           let activeIndex = this.activeIndex;
+  //           let slides = this.slides;
+  //           slides.each(function (item, index) {
+  //             if (activeIndex === slides.length - 1) {
+  //               $(this).addClass("my-last-swiper");
+  //             } else {
+  //               $(this).removeClass("my-last-swiper");
+  //             }
+  //             if (activeIndex > index) {
+  //               $(this).addClass("my-prev-swiper");
+  //             } else {
+  //               $(this).removeClass("my-prev-swiper");
+  //             }
+  //           });
+  //         }
+  //       },
+  //     },
+  //   });
+  //   // if (destroy) {
+  //   //   console.log("s.params.initialSlide" + el);
+  //   //   s.slideTo(s.params.initialSlide);
+  //   //   s.destroy();
+  //   // }
+  // }
+  var s1 = new Swiper(".roadmap-swiper-boxes-1", {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    centeredSlides: true,
+    initialSlide: 1,
+    allowTouchMove: false,
+    navigation: {
+      nextEl: "#tab-1 .roadmap-navigation-next",
+      prevEl: "#tab-1 .roadmap-navigation-prev",
+    },
+    breakpoints: {
+      576: {
+        initialSlide: 1,
+        slidesPerView: 3,
       },
-      on: {
-        init: function () {
-          $(".roadmap .roadmap-first-swiper").addClass("my-active-swiper");
+      767: {
+        slidesPerView: 3,
 
+        initialSlide: 1,
+      },
+      991: {
+        initialSlide: 1,
+        slidesPerView: 5,
+      },
+    },
+    on: {
+      init: function () {
+        $(".roadmap .roadmap-first-swiper").addClass("my-active-swiper");
+        let activeIndex = this.activeIndex;
+        if (activeIndex == 1) {
+          $(".roadmap-navigation-prev").addClass(
+            "roadmap-navigation-prev-disabled"
+          );
+        } else {
+          $(".roadmap-navigation-prev").removeClass(
+            "roadmap-navigation-prev-disabled"
+          );
+        }
+      },
+      slideChange: function () {
+        if (this.activeIndex == 1) {
+          $(".roadmap-navigation-prev").addClass(
+            "roadmap-navigation-prev-disabled"
+          );
+        } else {
+          $(".roadmap-navigation-prev").removeClass(
+            "roadmap-navigation-prev-disabled"
+          );
+        }
+        if (this.activeIndex >= 1) {
+          $(".roadmap .roadmap-first-swiper").removeClass("my-active-swiper");
           let activeIndex = this.activeIndex;
-          console.log(this.params);
-          if (activeIndex == this.params.initialSlide) {
-            $(".roadmap-navigation-prev").addClass(
-              "roadmap-navigation-prev-disabled"
-            );
-          } else {
-            $(".roadmap-navigation-prev").removeClass(
-              "roadmap-navigation-prev-disabled"
-            );
-          }
-        },
-        slideChange: function () {
-          if (this.activeIndex == this.params.initialSlide) {
-            $(".roadmap-navigation-prev").addClass(
-              "roadmap-navigation-prev-disabled"
-            );
-          } else {
-            $(".roadmap-navigation-prev").removeClass(
-              "roadmap-navigation-prev-disabled"
-            );
-          }
-          if (this.activeIndex > 1) {
-            $(".roadmap .roadmap-first-swiper").removeClass("my-active-swiper");
-            let activeIndex = this.activeIndex;
-            let slides = this.slides;
-            slides.each(function (item, index) {
-              if (activeIndex === slides.length - 1) {
-                $(this).addClass("my-last-swiper");
-              } else {
-                $(this).removeClass("my-last-swiper");
-              }
-              if (activeIndex > index) {
-                $(this).addClass("my-prev-swiper");
-              } else {
-                $(this).removeClass("my-prev-swiper");
-              }
-            });
-          }
-        },
+          let slides = this.slides;
+          slides.each(function (item, index) {
+            console.log(activeIndex, index);
+            if (activeIndex === slides.length - 1) {
+              $(this).addClass("my-last-swiper");
+            } else {
+              $(this).removeClass("my-last-swiper");
+            }
+            if (activeIndex > index) {
+              $(this).addClass("my-prev-swiper");
+            } else {
+              $(this).removeClass("my-prev-swiper");
+            }
+          });
+        }
       },
-    });
-    if (destroy) {
-      s.destroy();
-    }
-  }
-  roadMapSwiper(".roadmap-swiper-boxes-1");
+    },
+  });
+
+  var s2 = new Swiper(".roadmap-swiper-boxes-2", {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    centeredSlides: true,
+    initialSlide: 1,
+    allowTouchMove: false,
+    navigation: {
+      nextEl: "#tab-2 .roadmap-navigation-next",
+      prevEl: "#tab-2 .roadmap-navigation-prev",
+    },
+    breakpoints: {
+      576: {
+        initialSlide: 1,
+        slidesPerView: 3,
+      },
+      767: {
+        slidesPerView: 3,
+
+        initialSlide: 1,
+      },
+      991: {
+        initialSlide: 1,
+        slidesPerView: 5,
+      },
+    },
+    on: {
+      init: function () {
+        $(".roadmap .roadmap-first-swiper").addClass("my-active-swiper");
+        let activeIndex = this.activeIndex;
+        if (activeIndex == 1) {
+          $(".roadmap-navigation-prev").addClass(
+            "roadmap-navigation-prev-disabled"
+          );
+        } else {
+          $(".roadmap-navigation-prev").removeClass(
+            "roadmap-navigation-prev-disabled"
+          );
+        }
+      },
+      slideChange: function () {
+        if (this.activeIndex == 1) {
+          $(".roadmap-navigation-prev").addClass(
+            "roadmap-navigation-prev-disabled"
+          );
+        } else {
+          $(".roadmap-navigation-prev").removeClass(
+            "roadmap-navigation-prev-disabled"
+          );
+        }
+        if (this.activeIndex >= 1) {
+          $(".roadmap .roadmap-first-swiper").removeClass("my-active-swiper");
+          let activeIndex = this.activeIndex;
+          let slides = this.slides;
+          slides.each(function (item, index) {
+            console.log(activeIndex, index);
+            if (activeIndex === slides.length - 1) {
+              $(this).addClass("my-last-swiper");
+            } else {
+              $(this).removeClass("my-last-swiper");
+            }
+            if (activeIndex > index) {
+              $(this).addClass("my-prev-swiper");
+            } else {
+              $(this).removeClass("my-prev-swiper");
+            }
+          });
+        }
+      },
+    },
+  });
+
+  var s3 = new Swiper(".roadmap-swiper-boxes-3", {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    centeredSlides: true,
+    initialSlide: 1,
+    allowTouchMove: false,
+    navigation: {
+      nextEl: "#tab-3 .roadmap-navigation-next",
+      prevEl: "#tab-3 .roadmap-navigation-prev",
+    },
+    breakpoints: {
+      576: {
+        initialSlide: 1,
+        slidesPerView: 3,
+      },
+      767: {
+        slidesPerView: 3,
+
+        initialSlide: 1,
+      },
+      991: {
+        initialSlide: 1,
+        slidesPerView: 5,
+      },
+    },
+    on: {
+      init: function () {
+        $(".roadmap .roadmap-first-swiper").addClass("my-active-swiper");
+        let activeIndex = this.activeIndex;
+        if (activeIndex == 1) {
+          $(".roadmap-navigation-prev").addClass(
+            "roadmap-navigation-prev-disabled"
+          );
+        } else {
+          $(".roadmap-navigation-prev").removeClass(
+            "roadmap-navigation-prev-disabled"
+          );
+        }
+      },
+      slideChange: function () {
+        if (this.activeIndex == 1) {
+          $(".roadmap-navigation-prev").addClass(
+            "roadmap-navigation-prev-disabled"
+          );
+        } else {
+          $(".roadmap-navigation-prev").removeClass(
+            "roadmap-navigation-prev-disabled"
+          );
+        }
+        if (this.activeIndex >= 1) {
+          $(".roadmap .roadmap-first-swiper").removeClass("my-active-swiper");
+          let activeIndex = this.activeIndex;
+          let slides = this.slides;
+          slides.each(function (item, index) {
+            console.log(activeIndex, index);
+            if (activeIndex === slides.length - 1) {
+              $(this).addClass("my-last-swiper");
+            } else {
+              $(this).removeClass("my-last-swiper");
+            }
+            if (activeIndex > index) {
+              $(this).addClass("my-prev-swiper");
+            } else {
+              $(this).removeClass("my-prev-swiper");
+            }
+          });
+        }
+      },
+    },
+  });
+
+  var s4 = new Swiper(".roadmap-swiper-boxes-4", {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    centeredSlides: true,
+    initialSlide: 1,
+    allowTouchMove: false,
+    navigation: {
+      nextEl: "#tab-4 .roadmap-navigation-next",
+      prevEl: "#tab-4 .roadmap-navigation-prev",
+    },
+    breakpoints: {
+      576: {
+        initialSlide: 1,
+        slidesPerView: 3,
+      },
+      767: {
+        slidesPerView: 3,
+
+        initialSlide: 1,
+      },
+      991: {
+        initialSlide: 1,
+        slidesPerView: 5,
+      },
+    },
+    on: {
+      init: function () {
+        $(".roadmap .roadmap-first-swiper").addClass("my-active-swiper");
+        let activeIndex = this.activeIndex;
+        if (activeIndex == 1) {
+          $(".roadmap-navigation-prev").addClass(
+            "roadmap-navigation-prev-disabled"
+          );
+        } else {
+          $(".roadmap-navigation-prev").removeClass(
+            "roadmap-navigation-prev-disabled"
+          );
+        }
+      },
+      slideChange: function () {
+        if (this.activeIndex == 1) {
+          $(".roadmap-navigation-prev").addClass(
+            "roadmap-navigation-prev-disabled"
+          );
+        } else {
+          $(".roadmap-navigation-prev").removeClass(
+            "roadmap-navigation-prev-disabled"
+          );
+        }
+        if (this.activeIndex >= 1) {
+          $(".roadmap .roadmap-first-swiper").removeClass("my-active-swiper");
+          let activeIndex = this.activeIndex;
+          let slides = this.slides;
+          slides.each(function (item, index) {
+            console.log(activeIndex, index);
+            if (activeIndex === slides.length - 1) {
+              $(this).addClass("my-last-swiper");
+            } else {
+              $(this).removeClass("my-last-swiper");
+            }
+            if (activeIndex > index) {
+              $(this).addClass("my-prev-swiper");
+            } else {
+              $(this).removeClass("my-prev-swiper");
+            }
+          });
+        }
+      },
+    },
+  });
+
+  // roadMapSwiper(".roadmap-swiper-boxes-1");
   // roadMapSwiper(".roadmap-swiper-boxes-2");
   // roadMapSwiper(".roadmap-swiper-boxes-3");
   // roadMapSwiper(".roadmap-swiper-boxes-4");
 
   // nav
   $(".main-header .nav-item").on("click", function () {
-    console.log($(this).attr("data-section"));
     let id = $(this).attr("data-section");
     window.scrollTo({
       top: $(`.${id}`).offset().top,
@@ -215,14 +508,13 @@ $(function () {
   $(".roadmap-tab").on("click", function () {
     let id = $(this).attr("data-tab");
     // tab-3
-    let idSplit =
-      parseInt(id.slice(4)) == 1
-        ? parseInt(id.slice(4))
-        : parseInt(id.slice(4)) - 1; // 2
-    console.log(idSplit);
+    // let idSplit =
+    //   parseInt(id.slice(4)) == 1
+    //     ? parseInt(id.slice(4))
+    //     : parseInt(id.slice(4)) - 1; // 2
     // tab-
-    roadMapSwiper(`#${"tab-" + idSplit} .roadmap-swiper-boxes`, true);
-    roadMapSwiper(`#${id} .roadmap-swiper-boxes`);
+    // roadMapSwiper(`#${"tab-" + idSplit} .roadmap-swiper-boxes`, true);
+    // roadMapSwiper(`#${id} .roadmap-swiper-boxes`);
     $(".roadmap-tab").removeClass("active");
     $(this).addClass("active");
     const activeTab = $(`#${id}`);
