@@ -149,7 +149,8 @@ $(function () {
           $(".roadmap .roadmap-first-swiper").addClass("my-active-swiper");
 
           let activeIndex = this.activeIndex;
-          if (activeIndex == 2) {
+          console.log(this.params);
+          if (activeIndex == this.params.initialSlide) {
             $(".roadmap-navigation-prev").addClass(
               "roadmap-navigation-prev-disabled"
             );
@@ -160,7 +161,7 @@ $(function () {
           }
         },
         slideChange: function () {
-          if (this.activeIndex == 2) {
+          if (this.activeIndex == this.params.initialSlide) {
             $(".roadmap-navigation-prev").addClass(
               "roadmap-navigation-prev-disabled"
             );
