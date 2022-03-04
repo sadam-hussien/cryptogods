@@ -72,14 +72,26 @@
 
           <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav ml-auto d-flex align-items-center">
-              <li class="nav-item text-capitalize active">about</li>
-              <li class="nav-item text-capitalize">Ecosystem</li>
-              <li class="nav-item text-capitalize">Gallery</li>
-              <li class="nav-item text-capitalize">Roadmap</li>
-              <li class="nav-item text-capitalize">In the Press</li>
-              <li class="nav-item text-capitalize">FAQ’s</li>
-              <li class="nav-item text-capitalize">Tutorials</li>
-              <li class="nav-item text-capitalize">Docs</li>
+              <li data-section="about" class="nav-item text-capitalize active">
+                about
+              </li>
+              <li data-section="ecosystem" class="nav-item text-capitalize">
+                Ecosystem
+              </li>
+              <li data-section="gallery" class="nav-item text-capitalize">
+                Gallery
+              </li>
+              <li data-section="roadmap" class="nav-item text-capitalize">
+                Roadmap
+              </li>
+              <li data-section="in-the-press" class="nav-item text-capitalize">
+                In the Press
+              </li>
+              <li data-section="faq" class="nav-item text-capitalize">FAQ’s</li>
+              <li data-section="tutorials" class="nav-item text-capitalize">
+                Tutorials
+              </li>
+              <li data-section="join" class="nav-item text-capitalize">Docs</li>
               <li class="connect-wallet">
                 <a href="#" class="ourbtn">Connect Wallet</a>
               </li>
@@ -112,7 +124,12 @@
           </div>
         </div>
       </div>
-      <img src="./imgs/hero/hero.svg" alt="hero image" class="img-fluid" />
+      <img
+        src="./imgs/hero/hero.svg"
+        alt="hero image"
+        class="img-fluid"
+        style="width: 100% !important; object-fit: cover"
+      />
     </section>
     <!-- end discover-section  -->
 
@@ -374,121 +391,462 @@
     <section class="roadmap p-t p-b">
       <div class="container" id="roadmap-container">
         <div class="row justify-content-between">
-          <div class="col">
+          <div class="col-6">
             <h2 class="title">roadmap</h2>
           </div>
-          <div></div>
+          <div class="col-6 d-flex justify-content-end">
+            <ul class="list-unstyled d-flex align-items-center roadmap-tabs">
+              <li data-tab="tab-1" class="roadmap-tab active">01</li>
+              <li data-tab="tab-2" class="roadmap-tab">02</li>
+              <li data-tab="tab-3" class="roadmap-tab">03</li>
+              <li data-tab="tab-4" class="roadmap-tab">04</li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <div class="roadmap-content" id="roadmap-content">
         <div class="roadmap-swiper-line"></div>
         <div class="roadmap-swiper-boxes">
-          <div class="swiper roadmap-swiper-boxes">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide" style="width: 120px !important"></div>
-              <div class="swiper-slide roadmap-first-swiper">
-                <div class="active-line"></div>
-                <div class="roadmap-box">
-                  <div
-                    class="d-flex align-items-center justify-content-between"
-                  >
-                    <h5 class="roadmap-box-number">1.1</h5>
-                    <div class="icon">
-                      <ion-icon name="checkmark-outline"></ion-icon>
+          <div id="tab-1" class="roadmap-box-outer active">
+            <div class="swiper roadmap-swiper-boxes">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="width: 120px !important"></div>
+                <div class="swiper-slide roadmap-first-swiper">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
                     </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
                   </div>
-                  <h6 class="roadmap-box-desc second-font">
-                    2,500 GODS collection ready to mint on the Ethereum Block
-                    chain
-                  </h6>
+                </div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc m-0 second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                  <div class="last-line"></div>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="active-line"></div>
-                <div class="roadmap-box">
-                  <div
-                    class="d-flex align-items-center justify-content-between"
-                  >
-                    <h5 class="roadmap-box-number">1.1</h5>
-                    <div class="icon">
-                      <ion-icon name="checkmark-outline"></ion-icon>
+            </div>
+          </div>
+          <div id="tab-2" class="roadmap-box-outer">
+            <div class="swiper roadmap-swiper-boxes">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="width: 120px !important"></div>
+                <div class="swiper-slide roadmap-first-swiper">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
                     </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
                   </div>
-                  <h6 class="roadmap-box-desc m-0 second-font">
-                    2,500 GODS collection ready to mint on the Ethereum Block
-                    chain
-                  </h6>
+                </div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc m-0 second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                  <div class="last-line"></div>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="active-line"></div>
-                <div class="roadmap-box">
-                  <div
-                    class="d-flex align-items-center justify-content-between"
-                  >
-                    <h5 class="roadmap-box-number">1.1</h5>
-                    <div class="icon">
-                      <ion-icon name="checkmark-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div id="tab-3" class="roadmap-box-outer">
+            <div class="swiper roadmap-swiper-boxes">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="width: 120px !important"></div>
+                <div class="swiper-slide roadmap-first-swiper">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
                     </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
                   </div>
-                  <h6 class="roadmap-box-desc second-font">
-                    2,500 GODS collection ready to mint on the Ethereum Block
-                    chain
-                  </h6>
+                </div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc m-0 second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                  <div class="last-line"></div>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="active-line"></div>
-                <div class="roadmap-box">
-                  <div
-                    class="d-flex align-items-center justify-content-between"
-                  >
-                    <h5 class="roadmap-box-number">1.1</h5>
-                    <div class="icon">
-                      <ion-icon name="checkmark-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div id="tab-4" class="roadmap-box-outer">
+            <div class="swiper roadmap-swiper-boxes">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="width: 120px !important"></div>
+                <div class="swiper-slide roadmap-first-swiper">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
                     </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
                   </div>
-                  <h6 class="roadmap-box-desc second-font">
-                    2,500 GODS collection ready to mint on the Ethereum Block
-                    chain
-                  </h6>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="active-line"></div>
-                <div class="roadmap-box">
-                  <div
-                    class="d-flex align-items-center justify-content-between"
-                  >
-                    <h5 class="roadmap-box-number">1.1</h5>
-                    <div class="icon">
-                      <ion-icon name="checkmark-outline"></ion-icon>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
                     </div>
+                    <h6 class="roadmap-box-desc m-0 second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
                   </div>
-                  <h6 class="roadmap-box-desc second-font">
-                    2,500 GODS collection ready to mint on the Ethereum Block
-                    chain
-                  </h6>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="active-line"></div>
-                <div class="roadmap-box">
-                  <div
-                    class="d-flex align-items-center justify-content-between"
-                  >
-                    <h5 class="roadmap-box-number">1.1</h5>
-                    <div class="icon">
-                      <ion-icon name="checkmark-outline"></ion-icon>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
                     </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
                   </div>
-                  <h6 class="roadmap-box-desc second-font">
-                    2,500 GODS collection ready to mint on the Ethereum Block
-                    chain
-                  </h6>
                 </div>
-                <div class="last-line"></div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="active-line"></div>
+                  <div class="roadmap-box">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5 class="roadmap-box-number">1.1</h5>
+                      <div class="icon">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                      </div>
+                    </div>
+                    <h6 class="roadmap-box-desc second-font">
+                      2,500 GODS collection ready to mint on the Ethereum Block
+                      chain
+                    </h6>
+                  </div>
+                  <div class="last-line"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -517,7 +875,7 @@
       <div class="container">
         <h2 class="title text-center">in the press</h2>
         <div class="row align-items-center in-the-press-logos">
-          <div class="col-6 col-3 justify-content-center d-flex">
+          <div class="col-6 col-md-4 col-lg-3 justify-content-center d-flex">
             <img
               src="./imgs/in-the-press/logo1.svg"
               alt="logo one"
@@ -1013,6 +1371,7 @@
         src="./imgs/tutorials/tutsbg.png"
         alt="tuts"
         class="img-fluid tuts-bg"
+        style="width: 100% !important; object-fit: cover"
       />
       <div class="container">
         <!-- row  -->

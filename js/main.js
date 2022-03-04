@@ -131,4 +131,24 @@ $(function () {
       },
     },
   });
+
+  // nav
+  $(".main-header .nav-item").on("click", function () {
+    console.log($(this).attr("data-section"));
+    let id = $(this).attr("data-section");
+    window.scrollTo({
+      top: $(`.${id}`).offset().top,
+      behavior: "smooth",
+    });
+  });
+
+  // tabs
+  $(".roadmap-tab").on("click", function () {
+    $(".roadmap-tab").removeClass("active");
+    $(this).addClass("active");
+    let id = $(this).attr("data-tab");
+    const activeTab = $(`#${id}`);
+    $(".roadmap-box-outer").removeClass("active");
+    activeTab.addClass("active");
+  });
 });

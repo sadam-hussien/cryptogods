@@ -171,6 +171,7 @@ a:hover {
 .discover {
   background-image: url(../imgs/stars.png);
   background-size: cover;
+
   min-height: calc(100vh - var(--header-height));
   padding-top: calc(var(--space-lg) * 2);
 }
@@ -640,6 +641,14 @@ footer {
   padding-top: var(--space-md);
 }
 
+.roadmap .roadmap-box-outer {
+  display: none;
+}
+
+.roadmap .roadmap-box-outer.active {
+  display: block !important;
+}
+
 .roadmap .swiper-slide {
   padding-top: 50px;
   border-top: 1px dashed rgba(255 255 255 / 0.8);
@@ -779,6 +788,10 @@ footer {
   line-height: 24px;
 }
 
+.roadmap .swiper-slide.my-prev-swiper .roadmap-box-desc {
+  text-decoration: line-through;
+}
+
 .roadmap-box .icon {
   display: none;
   color: var(--main-color);
@@ -787,4 +800,20 @@ footer {
 
 .swiper-slide.my-prev-swiper .icon {
   display: block;
+}
+
+.roadmap-tab {
+  color: var(--white-color);
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.roadmap-tab.active,
+.roadmap-tab:hover {
+  color: var(--main-color);
+}
+
+.roadmap-tab:not(:last-child) {
+  margin-right: var(--space-lg);
 }
