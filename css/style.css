@@ -823,3 +823,15 @@ footer {
 .roadmap-tab:not(:last-child) {
   margin-right: var(--space-lg);
 }
+
+/* @media (max-width: 576px) {
+  .roadmap-tab:not(:last-child) {
+    margin-right: var(--space-sm);
+  }
+} */
+
+@media (max-width: 576px) {
+  .roadmap .swiper-slide {
+    min-width: 185px !important;
+  }
+}

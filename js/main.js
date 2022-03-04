@@ -100,7 +100,7 @@ $(function () {
     },
   });
 
-  // scroll to top
+  // scroll to top/
   $(window).on("scroll", function () {
     console.log($(window).scrollTop());
     if ($(window).scrollTop() >= 200) {
@@ -120,7 +120,7 @@ $(function () {
   function roadMapSwiper(el, destroy) {
     // ".roadmap-swiper-boxes"
     var s = new Swiper(el, {
-      slidesPerView: 5,
+      slidesPerView: 3,
       spaceBetween: 0,
       centeredSlides: true,
       initialSlide: 1,
@@ -129,12 +129,27 @@ $(function () {
         nextEl: ".roadmap-navigation-next",
         prevEl: ".roadmap-navigation-prev",
       },
+      breakpoints: {
+        576: {
+          initialSlide: 1,
+          slidesPerView: 3,
+        },
+        767: {
+          slidesPerView: 3,
+
+          initialSlide: 1,
+        },
+        991: {
+          initialSlide: 2,
+          slidesPerView: 5,
+        },
+      },
       on: {
         init: function () {
           $(".roadmap .roadmap-first-swiper").addClass("my-active-swiper");
 
           let activeIndex = this.activeIndex;
-          if (activeIndex == 1) {
+          if (activeIndex == 2) {
             $(".roadmap-navigation-prev").addClass(
               "roadmap-navigation-prev-disabled"
             );
@@ -145,7 +160,7 @@ $(function () {
           }
         },
         slideChange: function () {
-          if (this.activeIndex == 1) {
+          if (this.activeIndex == 2) {
             $(".roadmap-navigation-prev").addClass(
               "roadmap-navigation-prev-disabled"
             );
@@ -159,7 +174,6 @@ $(function () {
             let activeIndex = this.activeIndex;
             let slides = this.slides;
             slides.each(function (item, index) {
-              console.log(index, activeIndex);
               if (activeIndex === slides.length - 1) {
                 $(this).addClass("my-last-swiper");
               } else {
