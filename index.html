@@ -128,7 +128,12 @@
         src="./imgs/hero/hero.svg"
         alt="hero image"
         class="img-fluid"
-        style="width: 100% !important; object-fit: cover"
+        style="
+          width: 100% !important;
+          object-fit: cover;
+          position: relative;
+          z-index: 99;
+        "
       />
     </section>
     <!-- end discover-section  -->
@@ -396,7 +401,7 @@
           </div>
           <div class="col-6 d-flex justify-content-end">
             <ul class="list-unstyled d-flex align-items-center roadmap-tabs">
-              <li data-tab="tab-1" class="roadmap-tab active">01</li>
+              <li data-tab="tab-1" class="roadmap-tab roadmap-tab-1 active">01</li>
               <li data-tab="tab-2" class="roadmap-tab">02</li>
               <li data-tab="tab-3" class="roadmap-tab">03</li>
               <li data-tab="tab-4" class="roadmap-tab">04</li>
@@ -409,7 +414,7 @@
         <div class="roadmap-swiper-line"></div>
         <div class="roadmap-swiper-boxes">
           <div id="tab-1" class="roadmap-box-outer active">
-            <div class="swiper roadmap-swiper-boxes">
+            <div class="swiper roadmap-swiper-boxes roadmap-swiper-boxes-1">
               <div class="swiper-wrapper">
                 <div class="swiper-slide" style="width: 120px !important"></div>
                 <div class="swiper-slide roadmap-first-swiper">
@@ -519,7 +524,7 @@
             </div>
           </div>
           <div id="tab-2" class="roadmap-box-outer">
-            <div class="swiper roadmap-swiper-boxes">
+            <div class="swiper roadmap-swiper-boxes roadmap-swiper-boxes-2">
               <div class="swiper-wrapper">
                 <div class="swiper-slide" style="width: 120px !important"></div>
                 <div class="swiper-slide roadmap-first-swiper">
@@ -630,7 +635,7 @@
           </div>
 
           <div id="tab-3" class="roadmap-box-outer">
-            <div class="swiper roadmap-swiper-boxes">
+            <div class="swiper roadmap-swiper-boxes roadmap-swiper-boxes-3">
               <div class="swiper-wrapper">
                 <div class="swiper-slide" style="width: 120px !important"></div>
                 <div class="swiper-slide roadmap-first-swiper">
@@ -741,7 +746,7 @@
           </div>
 
           <div id="tab-4" class="roadmap-box-outer">
-            <div class="swiper roadmap-swiper-boxes">
+            <div class="swiper roadmap-swiper-boxes roadmap-swiper-boxes-4">
               <div class="swiper-wrapper">
                 <div class="swiper-slide" style="width: 120px !important"></div>
                 <div class="swiper-slide roadmap-first-swiper">
