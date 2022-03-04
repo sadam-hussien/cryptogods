@@ -200,7 +200,10 @@ $(function () {
   $(".roadmap-tab").on("click", function () {
     let id = $(this).attr("data-tab");
     // tab-3
-    let idSplit = parseInt(id.slice(4)) - 1; // 2
+    let idSplit =
+      parseInt(id.slice(4)) == 1
+        ? parseInt(id.slice(4))
+        : parseInt(id.slice(4)) - 1; // 2
     console.log(idSplit);
     // tab-
     roadMapSwiper(`#${"tab-" + idSplit} .roadmap-swiper-boxes`, true);
