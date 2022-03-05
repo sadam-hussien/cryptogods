@@ -1,3 +1,4 @@
+AOS.init();
 // Some random colors
 const colors = ["#FADC94"];
 
